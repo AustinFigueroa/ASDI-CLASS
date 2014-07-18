@@ -1,7 +1,9 @@
 =run
 Figueroa_Austin_Objects_Projects1\:launchMode=run
 Figueroa_Austin_Objects_Projects1\:launchShortcut=com.appcelerator.titanium.mobile.ui.ios.simulator.iphone.launchShortcut.iPhone Retina (4 inch 64-bit)
-LAST_LAUNCH_TIMESTAMP=1405191940066
+Figueroa_Austin_WorkingwithRemoteData_Project2\:launchMode=run
+Figueroa_Austin_WorkingwithRemoteData_Project2\:launchShortcut=com.appcelerator.titanium.mobile.ui.ios.simulator.iphone.launchShortcut.iPhone Retina (4 inch 64-bit)
+LAST_LAUNCH_TIMESTAMP=1405694512643
 eclipse.preferences.version=1
 preference.show.console.onError=true
 preference.studio.perspective.version=103

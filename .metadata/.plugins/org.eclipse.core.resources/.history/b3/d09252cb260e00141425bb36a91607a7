@@ -1,0 +1,51 @@
+var url = "http://api.reddit.com/r/gaming/";
+
+var showImg = function(e){
+	var Window = Ti.UI.createWindow({
+		backgroundColor: "#fff"
+	});
+	
+	var img = Ti.UI.createImageView({
+		image: e.source.picture
+	});
+	
+	Window.add(img);
+	navWin.openWindow(Window);
+	
+};
+
+var success = function(){
+	var replyData = JSON.parse(this.responseText);
+	var posts = replyData.data.children;
+	
+	for(var i=0; i<posts.length; i++){
+		var title = posts[i].data.title;
+		var pic = posts[i].data.url;
+		var comment = posts[i].data.permalink;
+	    
+	    var theRow = Ti.UI.createTableViewRow({
+			title: title,
+			font: {fontSize: 14, fontFamily: "Arial"},
+			textAlign: "left",
+			height: Ti.UI.SIZE
+	});
+
+	apiheader.add(theRow);
+	theRow.addEventListener("click", showImg);
+	//scroll.add(theRow);
+	}
+
+};
+
+var error = function(e){
+	alert("Something went wrong. The data you are trying to access cannot be found.");
+};
+
+var client = Ti.Network.createHTTPClient({
+	onload: success,
+	onerror: error,
+	timeout: 5000
+});
+
+client.open("GET",url);
+client.send();
