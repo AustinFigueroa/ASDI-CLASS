@@ -1,9 +1,13 @@
 =run
+Figueroa_Austin_LocalStoragewithSQLite_Project3\:launchMode=run
+Figueroa_Austin_LocalStoragewithSQLite_Project3\:launchShortcut=com.appcelerator.titanium.mobile.ui.ios.simulator.iphone.launchShortcut.iPhone Retina (4 inch 64-bit)
 Figueroa_Austin_Objects_Projects1\:launchMode=run
 Figueroa_Austin_Objects_Projects1\:launchShortcut=com.appcelerator.titanium.mobile.ui.ios.simulator.iphone.launchShortcut.iPhone Retina (4 inch 64-bit)
 Figueroa_Austin_WorkingwithRemoteData_Project2\:launchMode=run
 Figueroa_Austin_WorkingwithRemoteData_Project2\:launchShortcut=com.appcelerator.titanium.mobile.ui.ios.simulator.iphone.launchShortcut.iPhone Retina (4 inch 64-bit)
-LAST_LAUNCH_TIMESTAMP=1405694512643
+LAST_LAUNCH_TIMESTAMP=1406310423917
 eclipse.preferences.version=1
+fawev\:launchMode=run
+fawev\:launchShortcut=com.appcelerator.titanium.mobile.ui.ios.simulator.iphone.launchShortcut.iPhone Retina (4 inch 64-bit)
 preference.show.console.onError=true
 preference.studio.perspective.version=103
