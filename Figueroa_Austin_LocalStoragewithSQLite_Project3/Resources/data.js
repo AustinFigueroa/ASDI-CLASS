@@ -28,7 +28,7 @@ var create = function(name, health, mana, lvl) {
 	var rowID= db.lastInsertRowId;
 	db.close();
 	tblData = [];
-	ui.tabGroup.setActiveTab(ui.tab1);
+	ui.tabGroup.setActiveTab(ui.tab1); //undefined: you are calling on a tabGroup property here from your ui.js file however you did not export out any such property in the ui file.
 };
 exports.create = create;
 

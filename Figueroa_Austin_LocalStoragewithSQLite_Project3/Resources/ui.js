@@ -137,4 +137,8 @@ exports.manaLabel = Ti.UI.createLabel({
 tabGroup.addTab(tab1);  
 tabGroup.addTab(tab2);  
 
+/*
+ * data.js is attempting to call ui.tabGroup from this file however you never created a tabGroup proptery on your exports here.
+ */
+
 tabGroup.open();
