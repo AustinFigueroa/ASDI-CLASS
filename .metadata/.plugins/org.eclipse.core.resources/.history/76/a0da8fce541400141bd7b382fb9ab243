@@ -74,11 +74,11 @@ var tableData = Ti.UI.createTableView({
  	font: {fontSize: 14, fontFamily: "Arial"},
  	color: "#fff",
  	left: 15,
- 	top: 20,
+ 	top: 30,
  	textAlign: "left"
  });
  exports.nameField = Ti.UI.createTextField({
- 	left: 15, right: 15, top: 2,
+ 	left: 15, right: 15, top: 3,
  	height: 30,
  	borderSize: 1,
  	borderColor: "gray",
@@ -90,11 +90,11 @@ var tableData = Ti.UI.createTableView({
  	font: {fontSize: 14, fontFamily: "Arial"},
  	color: "#fff",
  	left: 15,
- 	top: 20,
+ 	top: 30,
  	textAlign: "left"
  });
  exports.healthField = Ti.UI.createTextField({
- 	left: 15, right: 15, top: 2,
+ 	left: 15, right: 15, top: 3,
  	height:30,
  	borderSize: 1,
  	borderColor: "gray",
@@ -107,11 +107,11 @@ exports.manaLabel = Ti.UI.createLabel({
  	font: {fontSize: 14, fontFamily: "Arial"},
  	color: "#fff",
  	left: 15,
- 	top: 20,
+ 	top: 30,
  	textAlign: "left"
  });
  exports.manaField = Ti.UI.createTextField({
- 	left: 15, right: 15, top: 2,
+ 	left: 15, right: 15, top: 3,
  	height:30,
  	borderSize: 1,
  	borderColor: "gray",
@@ -120,14 +120,14 @@ exports.manaLabel = Ti.UI.createLabel({
  });
  exports.lvlLabel = Ti.UI.createLabel({
  	text: "Level",
- 	font: {fontSize: 14, fontFamily: "Arial"},
+ 	font: {fontSize: "14sp", fontFamily: "Arial"},
  	color: "#fff",
- 	left: 15,
- 	top: 20,
+ 	left: "15dp",
+ 	top: "30dp",
  	textAlign: "left"
  });
  exports.lvlField = Ti.UI.createTextField({
- 	left: 15, right: 15, top: 2,
+ 	left: 15, right: 15, top: 3,
  	height: 30,
  	borderSize: 1,
  	borderColor: "gray",

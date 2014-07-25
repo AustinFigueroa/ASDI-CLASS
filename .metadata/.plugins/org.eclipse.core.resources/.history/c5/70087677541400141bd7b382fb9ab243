@@ -23,12 +23,12 @@ var tableData = Ti.UI.createTableView({
  		var tblRows = Ti.UI.createTableViewRow({
  			id: personalData[i].id,
  			width: Ti.UI.FILL, 
- 			height: 75
+ 			height: "75dp"
  		});
  		var tblView = Ti.UI.createView({
  			layout: "vertical", 
- 			left: 20,
- 			top: 5,
+ 			left: "20dp",
+ 			top: "5dp",
  			height: Ti.UI.FILL, 
  			width: Ti.UI.FILL
  		});
@@ -74,11 +74,11 @@ var tableData = Ti.UI.createTableView({
  	font: {fontSize: 14, fontFamily: "Arial"},
  	color: "#fff",
  	left: 15,
- 	top: 20,
+ 	top: 30,
  	textAlign: "left"
  });
  exports.nameField = Ti.UI.createTextField({
- 	left: 15, right: 15, top: 2,
+ 	left: 15, right: 15, top: 3,
  	height: 30,
  	borderSize: 1,
  	borderColor: "gray",
@@ -87,60 +87,60 @@ var tableData = Ti.UI.createTableView({
  });
  exports.healthLabel = Ti.UI.createLabel({
  	text: "Health",
- 	font: {fontSize: 14, fontFamily: "Arial"},
+ 	font: {fontSize: "14sp", fontFamily: "Arial"},
  	color: "#fff",
- 	left: 15,
- 	top: 20,
+ 	left: "15dp",
+ 	top: "30dp",
  	textAlign: "left"
  });
  exports.healthField = Ti.UI.createTextField({
- 	left: 15, right: 15, top: 2,
- 	height:30,
- 	borderSize: 1,
+ 	left: "15dp", right: "15dp", top: "3dp",
+ 	height:"30dp",
+ 	borderSize: "1dp",
  	borderColor: "gray",
- 	font: {fontSize: 14, fontFamily: "Arial"},
- 	paddingLeft: 5, paddingRight: 5
+ 	font: {fontSize: "14sp", fontFamily: "Arial"},
+ 	paddingLeft: "5dp", paddingRight:"5dp"
  });
  
 exports.manaLabel = Ti.UI.createLabel({
  	text: "Mana",
- 	font: {fontSize: 14, fontFamily: "Arial"},
+ 	font: {fontSize: "14sp", fontFamily: "Arial"},
  	color: "#fff",
- 	left: 15,
- 	top: 20,
+ 	left: "15dp",
+ 	top: "30dp",
  	textAlign: "left"
  });
  exports.manaField = Ti.UI.createTextField({
- 	left: 15, right: 15, top: 2,
- 	height:30,
- 	borderSize: 1,
+ 	left: "15dp", right: "15dp", top: "3dp",
+ 	height:"30dp",
+ 	borderSize: "1dp",
  	borderColor: "gray",
- 	font: {fontSize: 14, fontFamily: "Arial"},
- 	paddingLeft: 5, paddingRight: 5
+ 	font: {fontSize: "14sp", fontFamily: "Arial"},
+ 	paddingLeft: "5dp", paddingRight:"5dp"
  });
  exports.lvlLabel = Ti.UI.createLabel({
  	text: "Level",
- 	font: {fontSize: 14, fontFamily: "Arial"},
+ 	font: {fontSize: "14sp", fontFamily: "Arial"},
  	color: "#fff",
- 	left: 15,
- 	top: 20,
+ 	left: "15dp",
+ 	top: "30dp",
  	textAlign: "left"
  });
  exports.lvlField = Ti.UI.createTextField({
- 	left: 15, right: 15, top: 2,
- 	height: 30,
- 	borderSize: 1,
+ 	left: "15dp", right: "15dp", top: "3dp",
+ 	height:"30dp",
+ 	borderSize: "1dp",
  	borderColor: "gray",
- 	font: {fontSize: 14, fontFamily: "Arial"},
- 	paddingLeft: 5, paddingRight: 5
+ 	font: {fontSize: "14sp", fontFamily: "Arial"},
+ 	paddingLeft: "5dp", paddingRight:"5dp"
  });
  
  exports.button = Ti.UI.createButton({
  	title: "Add Personal Stats",
- 	height: 30, top: 30,
- 	left: 15, right: 15,
+ 	height: "30dp", top: "30dp",
+ 	left: "15dp", right: "15dp",
  	backgroundColor: "#fff",
- 	borderSize: 1,
+ 	borderSize: "1dp",
  	borderColor:  "#000"
  });
 

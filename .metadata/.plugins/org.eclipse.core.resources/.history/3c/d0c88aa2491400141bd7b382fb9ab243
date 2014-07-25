@@ -5,13 +5,13 @@ var pHeight = Ti.Platform.displayCaps.platformHeight;
 
 var win = Ti.UI.createWindow({
 	title: "Personal Stats",
-	backgroundColor: "#333",
+	backgroundColor: "#fff",
 	layout: "vertical"
 });
 
 var window = Ti.UI.createWindow({
 	title: "Add New Person Stats",
-	backgroundColor: "#333",
+	backgroundColor: "#fff",
 	layout: "vertical"
 });
 
@@ -21,7 +21,7 @@ data.read();
 
 ui.button.addEventListener("click", function(e){
 	if(ui.button.edit != true) {
-		alert("Setup Data!!");
+		alert("Data was Setup!!");
 		var newName = ui.nameField.value;
 		var newHealth = ui.healthField.value;
 		var newMana = ui.manaField.value;

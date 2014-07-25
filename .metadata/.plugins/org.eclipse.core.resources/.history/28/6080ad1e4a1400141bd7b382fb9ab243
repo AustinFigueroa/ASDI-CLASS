@@ -38,7 +38,7 @@ var update = function (index, location){
 	db.close();
 	tblData = [];
 	read();
-	ui.tabGroup.setActiveTab(ui.tab1);
+	ui.tabGroup.setActiveTab(ui, tab1);
 	ui.button.id = null;
 	ui.button.edit = false;
 	ui.button.title = "Add Personal Stats";
