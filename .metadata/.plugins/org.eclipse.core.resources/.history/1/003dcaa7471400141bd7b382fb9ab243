@@ -38,7 +38,7 @@ ui.button.addEventListener("click", function(e){
 		data.read();
 	} else {
 		ui.tableData.removeAllChildren();
-		data.update(ui.button.index, ui.button.location);
+		data.upload(ui.button.index, ui.button.location);
 	}
 });
 
@@ -73,7 +73,7 @@ ui.tableData.addEventListener("click", function(e){
 				message: "Delete these Personal Stats?",
 				title:"Delete Personal Stats"
 			});
-			confirmDelete.addEventListener("click",function(evt2){
+			confrimDelete.addEventListener("click",function(evt2){
 				if (evt2.index === 0){
 					ui.button.id = e.row.id;
 					data.del(ui.button.id);

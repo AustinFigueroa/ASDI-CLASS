@@ -38,7 +38,7 @@ ui.button.addEventListener("click", function(e){
 		data.read();
 	} else {
 		ui.tableData.removeAllChildren();
-		data.update(ui.button.index, ui.button.location);
+		data.upload(ui.button.index, ui.button.location);
 	}
 });
 

@@ -38,7 +38,7 @@ ui.button.addEventListener("click", function(e){
 		data.read();
 	} else {
 		ui.tableData.removeAllChildren();
-		data.update(ui.button.index, ui.button.location);
+		data.upload(ui.button.index, ui.button.location);
 	}
 });
 
@@ -67,13 +67,13 @@ ui.tableData.addEventListener("click", function(e){
 			ui.tabGroup.setActiveTab(ui.tab2);
 		}
 		if (evt.index === 1) {
-			var confirmDelete = Ti.UI.createAlertDialog({
+			var confirmDelete = Ti.Ui.createAlertDialog({
 				cancel: 1,
 				buttonNames: ["Ok", "Cancel"],
 				message: "Delete these Personal Stats?",
 				title:"Delete Personal Stats"
 			});
-			confirmDelete.addEventListener("click",function(evt2){
+			confrimDelete.addEventListener("click",function(evt2){
 				if (evt2.index === 0){
 					ui.button.id = e.row.id;
 					data.del(ui.button.id);
