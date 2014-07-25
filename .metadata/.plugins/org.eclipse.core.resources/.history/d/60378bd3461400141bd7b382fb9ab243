@@ -136,10 +136,19 @@ exports.manaLabel = Ti.UI.createLabel({
 
 tabGroup.addTab(tab1);  
 tabGroup.addTab(tab2);  
+exports.tabGroup = Ti.UI.createTabGroup();
 
-exports.tabGroup = tabGroup;
-exports.tab1 = tab1;
-exports.tab2 = tab2;
+exports.tab1 = Ti.UI.createTab({
+	icon: "Ks_nav_views.png",
+	title: "Personal Data",
+	window: win
+});
+
+exports.tab2 = Ti.UI.createTab({
+	icon: "Ks_nav_ui.png",
+	title: "Add",
+	window: window
+});
 
 /*
  * data.js is attempting to call ui.tabGroup from this file however you never created a tabGroup proptery on your exports here.
