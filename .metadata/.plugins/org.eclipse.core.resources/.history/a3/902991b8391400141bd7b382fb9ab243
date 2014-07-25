@@ -22,7 +22,7 @@ data.read();
 ui.button.addEventListener("click", function(e){
 	if(ui.button.edit != true) {
 		alert("Setup Data!!");
-		var newName = ui.nameField.value;
+		var newTitle = ui.nameField.value;
 		var newHealth = ui.healthField.value;
 		var newMana = ui.manaField.value;
 		var newLvl = ui.lvlField.value;
@@ -34,7 +34,7 @@ ui.button.addEventListener("click", function(e){
 		ui.healthField.blur();
 		ui.manaField.blur();
 		ui.lvlField.blur();
-		data.create(newName, newHealth, newMana, newLvl);
+		data.create(newTitle, newHealth, newMana, newLvl);
 		data.read();
 	} else {
 		ui.tableData.removeAllChildren();
@@ -55,15 +55,15 @@ ui.tableData.addEventListener("click", function(e){
 				var views = e.row.children[i];
 				ui.nameField.value = views.children[0].text;
 				ui.healthField.value = views.children[1].text;
-				ui.manaField.value = views.children[1].text;
-				ui.lvlField.value = views.children[1].text;
+				ui.manaField.value = views.children[2].text;
+				ui.lvlField.value = views.children[3].text;
 			}
 			ui.button.title = "Update Personal Stats";
 			ui.button.id = e.row.id;
 			ui.button.edit = true;
 			ui.button.index = e.index;
 			window.title = "Update Personal Data";
-			ui.tab2.title = "Update";
+			ui.tab2.message = "Update";
 			ui.tabGroup.setActiveTab(ui.tab2);
 		}
 		if (evt.index === 1) {
