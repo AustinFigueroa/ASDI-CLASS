@@ -55,8 +55,8 @@ ui.tableData.addEventListener("click", function(e){
 				var views = e.row.children[i];
 				ui.nameField.value = views.children[0].text;
 				ui.healthField.value = views.children[1].text;
-				ui.manaField.value = views.children[2].text;
-				ui.lvlField.value = views.children[3].text;
+				ui.manaField.value = views.children[1].text;
+				ui.lvlField.value = views.children[1].text;
 			}
 			ui.button.title = "Update Personal Stats";
 			ui.button.id = e.row.id;
