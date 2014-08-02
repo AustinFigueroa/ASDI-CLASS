@@ -1,0 +1,43 @@
+var url = "http://api.reddit.com/r/gaming/";
+
+var success = function(){
+   alert("Your API data was found.");
+   console.log(this.responseText);
+   Ti.Database.install("GameTbl.sqlite","RedditGaming");
+   
+   var replyData = JSON.parse(this.responseText);
+   var posts = replyData.data.children;
+   //console.log(posts);
+   
+   for(var i=0; i<posts.length; i++){
+		var title = posts[i].data.title;
+		var pic = posts[i].data.url;
+		console.log(title);
+		console.log(pic);
+   
+   var db = Ti.Database.open("RedditGaming");
+   // var seeData = db.execute("SELECT * FROM data");
+   // while(seeData.isValidRow()){
+   	// var dbData = JSON.parse(seeData.fieldByName("remote"));
+		// console.log(dbData);
+		// seeData.next();
+	// }
+	// seeData.close();
+	db.close();
+
+};
+
+var error = function(e){
+	alert("Something went wrong. The data you are trying to access cannot be found.");
+};
+
+var client = Ti.Network.createHTTPClient({
+	onload: success,
+	onerror: error,
+	timeout: 5000
+});
+
+client.open("GET",url);
+client.send();
+
+exports.listing = "url";

@@ -1,0 +1,19 @@
+Ti.Database.install("GameTbl.sqlite","RedditGaming");
+
+var replyData = JSON.parse(this.responseText);
+var posts = replyData.data.children;
+
+for(var i=0; i<posts.length; i++){
+		var gameInfo = new remote.Object(posts[i].data);
+};
+
+var db = Ti.Database.open("RedditGaming");
+var seeData = db.execute("SELECT * FROM data");
+while(seeData.isValidRow()){
+	var dbData = JSON.parse(seeData.fieldByName("remote"));
+	console.log(dbData);
+	seeData.next();
+}
+seeData.close();
+db.close();
+

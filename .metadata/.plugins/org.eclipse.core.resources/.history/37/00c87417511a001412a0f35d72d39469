@@ -1,0 +1,11 @@
+Ti.UI.setBackgroundColor("#fff");
+
+var win = Ti.UI.createWindow({
+	backgroundColor: "#fff"
+});
+
+var remote = require("remote");
+var database = require("database");
+var OOP = require("OOP");
+
+win.open();

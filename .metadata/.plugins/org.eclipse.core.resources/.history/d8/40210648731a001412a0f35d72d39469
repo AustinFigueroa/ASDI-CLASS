@@ -1,0 +1,50 @@
+//HTTPClient
+
+//If the DB is empty and/or we want to upate the DB with new INFO
+
+var client = Ti.Network.createHTTPClient({
+onload: success,
+onerror: error,
+timeout: 5000
+});
+
+
+//Success
+var success = function(){
+//check to see if DB has data
+//open the DB -> loop through it db.isValidRow();
+//if it does, delete all of it
+
+//get responseTet
+
+//loop through the response 
+//create new OOP.Object object.
+
+//read();
+
+};
+
+//Error
+var error = function(){
+read(); //read from the db
+};
+
+var read = function(){
+//open db
+//loop through db (.isValidRow());
+//create row (with your title and other properties, etc)
+//add row to your table view section
+//add event listener to table table.addEventListener("click", function(evt){ //  });
+//createDialog 
+//createDialog.addEventListener("click", fuction(e){ // });
+//if e.index === "Open"
+openDetail(evt.source); //run function to open the window
+//if e.index === "Delete"
+delete(evt.source.id); //run function to delete item from db.
+//show dialog
+//set data to the table
+};
+
+var delete = function(e){
+//deletes corresponding row on screen from the DB.
+};

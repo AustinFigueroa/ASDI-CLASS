@@ -1,0 +1,10 @@
+var Info = function(obj){
+	this.title = obj.title;
+
+var db = Ti.Database.open("RedditGaming");
+var rows = db.execute("INSERT INTO gameTbl (info) VALUES(?)", JSON.stringify(this));
+db.close();
+
+};
+
+exports.Object = Info;
