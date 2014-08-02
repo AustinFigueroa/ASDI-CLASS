@@ -1,0 +1,36 @@
+Ti.Database.install("GameTbl.sqlite", "RedditGaming");
+
+var tblData = [];
+var read = function(){
+	var db = Ti.Database.open("RedditGaming");
+	var dbRows = db.execute("SELECT id, title, url FROM gameTbl");
+	while (dbRows.isValidRow()) {
+		tblData.push({
+			id: dbRows.fieldByName("id"),
+			title: dbRows.fieldByName("title"),
+			url: dbRows.fieldByName("url")
+		});
+		dbRows.next();
+	}
+	dbRows.close();
+	db.close();
+	};
+exports.read = read;
+
+var create = function(title, url) {
+	var db = Ti.Database.open("RedditGaming");
+	db.execute("INSERT INTO statTbl (title, url) VALUES ( ?, ?)", title, url);
+	var rowID= db.lastInsertRowId;
+	db.close();
+	tblData = [];
+	};
+exports.create = create;
+
+var del = function(id){
+	var db = Ti.Database.open("RedditGaming");
+	db.execute("DELETE FROM statTbl WHERE id=?", id);
+	db.close();
+	tblData = [];
+	read();
+};
+exports.del = del;

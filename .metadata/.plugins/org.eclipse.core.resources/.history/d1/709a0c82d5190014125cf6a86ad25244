@@ -1,0 +1,22 @@
+Ti.Database.install("GameTbl.sqlite", "RedditGaming");
+
+var tblData = [];
+
+var db = Ti.Database.open("RedditGaming");
+var dbRows = db.execute("SELECT id, info FROM gameTbl");
+	while(dbRows.isValidRow()){
+			var dbData = JSON.parse(dbRows.fieldByName("info"));
+			dbRows.next();	
+		}
+dbRows.close();
+db.close();
+		
+var del = function(id){
+	var db = Ti.Database.open("RedditGaming");
+	db.execute("DELETE FROM gameTbl WHERE id=?", id);
+	db.close();
+	tblData = [];
+	read();
+};
+
+exports.del = del;

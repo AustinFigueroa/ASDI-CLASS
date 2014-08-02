@@ -1,0 +1,13 @@
+var tblData = [];
+
+
+
+var db = Ti.Database.open("RedditGaming");
+		var dbRows = db.execute("SELECT id, info FROM posts");
+		while(dbRows.isValidRow()){
+			var dbData = JSON.parse(dbRows.fieldByName("info"));
+			dbRows.next();	
+		}
+		dbRows.close();
+		db.close();
+		

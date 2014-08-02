@@ -56,6 +56,7 @@ var tableData = Ti.UI.createTableView({
  			width:Ti.UI.FILL,
  			font: {fontSize: 14, fontFamily: "Arial", fontColor: "#000"}
  		});
+ 		
  		tblView.add(nameLabel);
  		tblView.add(healthLabel);
  		tblView.add(manaLabel);
