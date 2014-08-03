@@ -48,6 +48,7 @@ var error = function(e){
 	read();
 	alert("Something went wrong. The data you are trying to access cannot be found.");
 };
+<<<<<<< HEAD
   
   var read = function(){
  	var db = Ti.Database.open("RedditGaming"); //this is just your db. it's the whole thing, not each individual row.
@@ -65,6 +66,23 @@ var error = function(e){
   			textAlign: "left",
   		});
 	// console.log(theRow.picture);
+=======
+
+var read = function(){
+	var db = Ti.Database.open("RedditGaming"); //this is just your db. it's the whole thing, not each individual row.
+	var dbRows = db.execute("SELECT id, info FROM gameTbl"); //This gets the data from your database
+	//take a look at what dbRows contains -> console.log(dbRows);
+	//note that dbRows returns what looks like an object (but remember it's been stringified, you need to parse it back as an object) -> JSON.parse(//your object here);
+	while (dbRows.isValidRow()) {
+	
+	var theRow = Ti.UI.createTableViewRow({
+			title: db.title, //db is your database so db.title isn't going to return anything because your data lives inside a table within your db and in the table it's inside a column. This is where dbRows comes into play.
+			picture: db.url, //same as above ^
+			font: {fontSize: 14, fontFamily: "Arial"},
+			textAlign: "left",
+		});
+	console.log(theRow.picture);
+>>>>>>> FETCH_HEAD
 		apiheader.add(theRow);
 		theRow.addEventListener('click', function(e){
 			var dialog = Ti.UI.createAlertDialog({
