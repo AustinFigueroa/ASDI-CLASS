@@ -48,6 +48,7 @@ var error = function(e){
 	read();
 	alert("Something went wrong. The data you are trying to access cannot be found.");
 };
+<<<<<<< HEAD
   
   var read = function(){
  	var db = Ti.Database.open("RedditGaming"); //this is just your db. it's the whole thing, not each individual row.
@@ -55,7 +56,7 @@ var error = function(e){
  	console.log(dbRows);
  	//take a look at what dbRows contains -> console.log(dbRows);
  	//note that dbRows returns what looks like an object (but remember it's been stringified, you need to parse it back as an object) -> JSON.parse(//your object here);
-  	//JSON.parse(databaseResultSet);
+  	JSON.parse(databaseResultSet);
   	while (dbRows.isValidRow()) {
   	
   	var theRow = Ti.UI.createTableViewRow({
@@ -65,6 +66,7 @@ var error = function(e){
   			textAlign: "left",
   		});
 	// console.log(theRow.picture);
+=======
 
 var read = function(){
 	var db = Ti.Database.open("RedditGaming"); //this is just your db. it's the whole thing, not each individual row.
@@ -80,6 +82,7 @@ var read = function(){
 			textAlign: "left",
 		});
 	console.log(theRow.picture);
+>>>>>>> FETCH_HEAD
 		apiheader.add(theRow);
 		theRow.addEventListener('click', function(e){
 			var dialog = Ti.UI.createAlertDialog({
@@ -112,8 +115,6 @@ var read = function(){
 });
 	});
 apiTable.setData([apiheader]);
-};
-};
 };
 };
 var client = Ti.Network.createHTTPClient({

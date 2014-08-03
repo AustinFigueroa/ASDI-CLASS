@@ -115,7 +115,7 @@ apiTable.setData([apiheader]);
 };
 };
 };
-};
+
 var client = Ti.Network.createHTTPClient({
 	onload: success,
 	onerror: error,
