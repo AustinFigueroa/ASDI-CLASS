@@ -21,8 +21,6 @@ var success = function(){
    //console.log(this.responseText);
    Ti.Database.install("GameTbl.sqlite","RedditGaming");
    
-   
-   
    var replyData = JSON.parse(this.responseText);
    var posts = replyData.data.children;
    //console.log(posts);
@@ -55,16 +53,16 @@ var error = function(e){
  	console.log(dbRows);
  	//take a look at what dbRows contains -> console.log(dbRows);
  	//note that dbRows returns what looks like an object (but remember it's been stringified, you need to parse it back as an object) -> JSON.parse(//your object here);
-  	JSON.parse(databaseResultSet);
+  	JSON.parse(object TiDatabaseResultSet);
   	while (dbRows.isValidRow()) {
   	
   	var theRow = Ti.UI.createTableViewRow({
- 		    title: dbRows.title, //db is your database so db.title isn't going to return anything because your data lives inside a table within your db and in the table it's inside a column. This is where dbRows comes into play.
-			picture: dbRows.url, //same as above ^
+ 		    title: db.title, //db is your database so db.title isn't going to return anything because your data lives inside a table within your db and in the table it's inside a column. This is where dbRows comes into play.
+			picture: db.url, //same as above ^
   			font: {fontSize: 14, fontFamily: "Arial"},
   			textAlign: "left",
   		});
-	// console.log(theRow.picture);
+	//console.log(theRow.picture);
 		apiheader.add(theRow);
 		theRow.addEventListener('click', function(e){
 			var dialog = Ti.UI.createAlertDialog({

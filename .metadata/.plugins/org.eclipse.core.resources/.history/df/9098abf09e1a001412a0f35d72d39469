@@ -21,8 +21,6 @@ var success = function(){
    //console.log(this.responseText);
    Ti.Database.install("GameTbl.sqlite","RedditGaming");
    
-   
-   
    var replyData = JSON.parse(this.responseText);
    var posts = replyData.data.children;
    //console.log(posts);
@@ -53,9 +51,9 @@ var error = function(e){
  	var db = Ti.Database.open("RedditGaming"); //this is just your db. it's the whole thing, not each individual row.
  	var dbRows = db.execute("SELECT id, info FROM gameTbl"); //This gets the data from your database
  	console.log(dbRows);
+ 	JSON.parse(db);
  	//take a look at what dbRows contains -> console.log(dbRows);
  	//note that dbRows returns what looks like an object (but remember it's been stringified, you need to parse it back as an object) -> JSON.parse(//your object here);
-  	JSON.parse(databaseResultSet);
   	while (dbRows.isValidRow()) {
   	
   	var theRow = Ti.UI.createTableViewRow({
