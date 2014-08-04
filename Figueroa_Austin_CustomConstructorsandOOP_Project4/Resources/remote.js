@@ -58,6 +58,10 @@ var error = function(e){
   	//JSON.parse(databaseResultSet);
   	while (dbRows.isValidRow()) {
   	
+  	/*
+  	 * dbRows is going to contain stringified data. You should parse this back so that you can access the properties of the object -> JSON.parse(dbRows.fieldByName('info'))
+  	 */
+  	
   	var theRow = Ti.UI.createTableViewRow({
  		    title: dbRows.title, //db is your database so db.title isn't going to return anything because your data lives inside a table within your db and in the table it's inside a column. This is where dbRows comes into play.
 			picture: dbRows.url, //same as above ^
@@ -65,6 +69,8 @@ var error = function(e){
   			textAlign: "left",
   		});
 	// console.log(theRow.picture);
+	
+	//I THINK YOU'RE MISSING A CLOSING BRACKET HERE FOR YOUR WHILE LOOP.
 
 var read = function(){
 	var db = Ti.Database.open("RedditGaming"); //this is just your db. it's the whole thing, not each individual row.
@@ -115,7 +121,7 @@ apiTable.setData([apiheader]);
 };
 };
 };
-};
+}; //I think this will be invalid once you close your while loop above correctly.
 var client = Ti.Network.createHTTPClient({
 	onload: success,
 	onerror: error,
